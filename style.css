@@ -1,0 +1,569 @@
+
+/* ==========================================================================
+   1. RESET GENERAL, TIPOGRAFÍA Y VARIABLES DE MARCA PREMIUM
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primario: #16a34a;       /* Verde Oscuro de Acentuación */
+    --secundario: #22c55e;     /* Verde Claro Emblema CAMCOM */
+    --oscuro: #060a13;         /* Fondo General Base de la Web */
+    --oscuro2: #0b111e;        /* Fondo Contenedores Secundarios */
+    --oscuro3: #131c2e;        /* Fondo Tarjetas Modernas */
+    --blanco: #ffffff;
+    --texto-muted: #94a3b8;
+    --glass-bg: rgba(19, 28, 46, 0.55);
+    --glass-border: rgba(34, 197, 94, 0.15);
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: linear-gradient(135deg, #020617, #0b111e, #020617);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--texto-muted);
+    margin-top: -20px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN (Sticky Navbar con Desenfoque de Cristalizado)
+   ========================================================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(3, 7, 18, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo-curva { 
+    color: var(--secundario); 
+    font-size: 32px; 
+}
+
+.logo-sub {
+    font-size: 11px;
+    color: var(--texto-muted);
+    text-transform: uppercase;
+    display: block;
+    margin-top: -8px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 25px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover { 
+    color: var(--secundario); 
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO (Portada Comercial de Alto Impacto)
+   ========================================================================== */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at center, rgba(34, 197, 94, 0.12) 0%, transparent 65%);
+}
+
+.badge-tech {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid var(--secundario);
+    color: var(--secundario);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 { 
+    font-size: 3.8rem; 
+    margin-bottom: 25px; 
+    line-height: 1.15; 
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero p { 
+    font-size: 1.25rem; 
+    margin-bottom: 45px; 
+    color: var(--texto-muted); 
+    max-width: 850px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.hero-buttons { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.btn-principal {
+    text-decoration: none; 
+    background: var(--secundario); 
+    color: #030712; 
+    padding: 16px 36px;
+    border-radius: 8px; 
+    font-weight: bold; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-principal:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4); 
+    background: #16a34a; 
+    color: var(--blanco);
+}
+
+.btn-secundario {
+    text-decoration: none; 
+    background: transparent; 
+    color: var(--blanco); 
+    padding: 16px 36px;
+    border-radius: 8px; 
+    border: 2px solid var(--secundario); 
+    font-weight: bold; 
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover { 
+    background: rgba(34, 197, 94, 0.08); 
+    transform: translateY(-3px); 
+}
+
+/* ==========================================================================
+   4. MAQUETACIÓN GLOBAL, REJILLAS Y EFECTO HOVER DE ILUMINACIÓN
+   ========================================================================== */
+section { 
+    padding: 100px 0; 
+}
+
+section h2 { 
+    text-align: center; 
+    font-size: 2.5rem; 
+    margin-bottom: 50px; 
+    font-weight: 800; 
+}
+
+section h2::after {
+    content: ""; 
+    display: block; 
+    width: 50px; 
+    height: 4px; 
+    background: var(--secundario); 
+    margin: 12px auto 0 auto; 
+    border-radius: 2px;
+}
+
+.cards-grid, .grid-servicios, .grid-equipo { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px;
+}
+
+.card, .servicio, .miembro {
+    background: var(--glass-bg);
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover, .servicio:hover, .miembro:hover {
+    transform: translateY(-8px);
+    border-color: var(--secundario);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.12);
+}
+
+.card h3, .servicio h3, .miembro h3 { 
+    color: var(--secundario); 
+    margin-bottom: 15px; 
+    font-size: 1.4rem; 
+}
+
+.card p, .servicio p { 
+    color: var(--texto-muted); 
+    font-size: 0.98rem; 
+    text-align: justify; 
+}
+
+.nosotros, .cotizador-section, .equipo, .faq-section { 
+    background: var(--oscuro2); 
+}
+
+.topologia-section, .servicios, .contacto {
+    background: var(--oscuro);
+}
+
+/* Fuerza el renderizado local de los íconos de FontAwesome */
+.grid-servicios i, .servicio i, .card i, .navbar i {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 2.5rem;
+    color: var(--secundario);
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover i, .card:hover i {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 8px var(--secundario));
+}
+
+/* ==========================================================================
+   5. INTERFAZ AVANZADA DE PESTAÑAS (Soporte para Planos Cisco Reales)
+   ========================================================================== */
+.tabs-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.btn-tab {
+    background: var(--oscuro3);
+    color: white;
+    border: 1px solid var(--glass-border);
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-tab.active, .btn-tab:hover {
+    background: var(--secundario);
+    color: #030712;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+/* PASO 5 CONFIGURADO: Efectos de desvanecimiento suave de nivel Senior */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-content.active-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blueprint-box {
+    display: grid; 
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 30px; 
+    background: var(--glass-bg); 
+    border: 1px solid var(--glass-border); 
+    padding: 30px; 
+    border-radius: 12px; 
+    align-items: center;
+}
+
+.blueprint-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blueprint-mock {
+    width: 100%;
+    height: 180px; 
+    background: #052e16; 
+    border: 2px dashed var(--secundario); 
+    border-radius: 8px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 3.5rem; 
+    color: var(--secundario);
+}
+
+.logical-mock { 
+    background: #1c1917; 
+    border-color: #a8a29e; 
+    color: #a8a29e; 
+}
+
+.blueprint-text h3 { 
+    font-size: 1.4rem; 
+    margin-bottom: 12px; 
+    color: var(--secundario); 
+}
+
+.blueprint-text p { 
+    color: var(--texto-muted); 
+    font-size: 0.96rem;
+    margin-bottom: 6px;
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   6. COTIZADOR, FORMULARIO INDUSTRIAL Y PIE DE PÁGINA
+   ========================================================================== */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: var(--secundario);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.input-group input, .input-group select {
+    padding: 14px;
+    background: var(--oscuro);
+    border: 1px solid var(--glass-border);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: var(--secundario);
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea {
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background: var(--oscuro3);
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secundario);
+}
+
+form button {
+    background: var(--secundario);
+    color: #030712;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #16a34a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.contacto {
+    background: var(--oscuro);
+    padding: 100px 0 140px 0;
+}
+
+footer {
+    background: #02040a;
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid var(--glass-border);
+    display: block !important;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content h3 { 
+    color: var(--secundario); 
+    margin-bottom: 12px; 
+    font-size: 1.6rem;
+}
+
+.footer-content p { 
+    color: var(--texto-muted); 
+    font-size: 0.95rem; 
+    margin-bottom: 8px;
+}
+
+.instructor-text { 
+    color: var(--secundario) !important; 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.copyright { 
+    color: var(--texto-muted); 
+    font-size: 0.85rem; 
+    margin-top: 12px !important; 
+}
+
+/* ==========================================================================
+   7. AVATARES DEL PERSONAL (PASO 4 CONFIGURADO: Recorte Circular Perfecto)
+   ========================================================================== */
+.avatar {
+    width: 85px;
+    height: 85px;
+    background: rgba(34, 197, 94, 0.08);
+    color: var(--secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: 2px solid var(--secundario);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden; /* Corta la imagen en un círculo perfecto */
+    padding: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que los rostros del personal se deformen */
+}
+
+.avatar i {
+    font-size: 1.8rem;
+}
+
+.miembro:hover .avatar {
+    transform: scale(1.1) rotate(8deg);
+    border-color: var(--blanco);
+    box-shadow: 0 0 15px var(--secundario);
+}
+
+/* ==========================================================================
+   8. BOTÓN FLOATING WHATSAPP (PASO 1 CONFIGURADO: Ondas expansivas)
+   ========================================================================== */
+.whatsapp { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    width: 60px; 
+    height: 60px; 
+    background: #25d366; 
+    color: white; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 32px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    z-index: 1000; 
+    transition: transform 0.3s ease;
+    text-decoration: none; 
+}
+
+.whatsapp i {
+    color: white !important;
+    margin: 0 !important;
+    font-size: 32px !important;
+}
+
+.whatsapp:hover { 
+    transform: scale(1.1); 
+    background: #20ba5a; 
+}
+
+.whatsapp::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #25d366;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulsoVerde 2s infinite;
+}
+
+@keyframes pulsoVerde {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+@media(max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .menu { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .hero h1 { font-size: 2.3rem; }
+    .blueprint-box { grid-template-columns: 1fr; }
+}
+
